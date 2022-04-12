@@ -178,7 +178,7 @@ class TranslationRepository extends DocumentRepository
             if ($result instanceof Cursor) {
                 $result = $result->toArray();
             }
-            $id = count($result) ? $result[0]['foreignKey'] : null;
+            $id = count($result) ? $result[0]['foreign_key'] : null;
             if ($id) {
                 $document = $this->dm->find($class, $id);
             }
